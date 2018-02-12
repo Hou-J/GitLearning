@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href={% static 'css/core.css' %}>
+    <script src={% static 'js/loadmap.js' %}></script>
+</head>
+<body>
+<div id="header">
+    <div class="nav-botton" onclick="showNav()">☰</div>
+    <div id="logo">Logo</div>
+</div>
+<div id="nav">
+    <div class="nav-item" onclick='showDiv("container-stations")'>Stations</div>
+    <div class="nav-item" onclick='showDiv("container-emission")'>Emission</div>
+    <div class="nav-item" onclick='showDiv("container-monitor")'>Monitor</div>
+    <div class="nav-item" onclick='showDiv("container-about")'>About</div>
+</div>
+<div id="container">
+    <div id="container-stations">
+        <div class="title"><h1>Stations</h1></div>
+        <div id="map"></div>
+    </div>
+
+    <div id="container-emission">
+        <div class="title"><h1>Emission</h1></div>
+        <div id="map"></div>
+    </div>
+
+    <div id="container-monitor">
+        <div class="title"><h1>Monitor</h1></div>
+    </div>
+
+    <div id="container-about">
+        <div class="title"><h1>About</h1></div>
+    </div>
+</div>
+</body>
+</html>
